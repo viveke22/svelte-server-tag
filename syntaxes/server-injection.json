@@ -1,0 +1,26 @@
+{
+  "scopeName": "server.injection.svelte",
+  "injectionSelector": "L:source.svelte",
+  "patterns": [
+    {
+      "begin": "(<)(server)(>)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.html" },
+        "2": { "name": "entity.name.tag.server.svelte" },
+        "3": { "name": "punctuation.definition.tag.end.html" }
+      },
+      "end": "(</)(server)(>)",
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.begin.html" },
+        "2": { "name": "entity.name.tag.server.svelte" },
+        "3": { "name": "punctuation.definition.tag.end.html" }
+      },
+      "contentName": "source.js.embedded.server",
+      "patterns": [
+        {
+          "include": "source.js"
+        }
+      ]
+    }
+  ]
+}

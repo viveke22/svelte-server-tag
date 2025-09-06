@@ -1,0 +1,38 @@
+{
+  "name": "svelte-server-tags",
+  "displayName": "Svelte Server Tags",
+  "description": "IntelliSense support for <server> tags in Svelte files",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": [
+    "onLanguage:svelte"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "svelte-server",
+        "aliases": ["Svelte Server", "svelte-server"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "svelte-server",
+        "scopeName": "source.js.svelte-server",
+        "path": "./syntaxes/svelte-server.json"
+      },
+      {
+        "scopeName": "server.injection.svelte",
+        "path": "./syntaxes/server-injection.json",
+        "injectTo": ["source.svelte"]
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0"
+  }
+}

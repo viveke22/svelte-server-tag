@@ -1,0 +1,8 @@
+{
+  "scopeName": "source.js.svelte-server",
+  "patterns": [
+    {
+      "include": "source.js"
+    }
+  ]
+}
